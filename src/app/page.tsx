@@ -123,7 +123,7 @@ export default function Home() {
       </section>
 
       {/* ─── MARKALAR SLIDER ─── */}
-      <section className="py-20 overflow-hidden">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="text-xs font-bold text-amber-500 uppercase tracking-widest">Yetkili Tedarikçi</span>

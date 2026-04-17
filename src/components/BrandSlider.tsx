@@ -73,7 +73,7 @@ export function BrandSlider({ brands }: BrandSliderProps) {
   };
 
   return (
-    <div className="relative group/slider">
+    <div className="relative group/slider overflow-x-clip">
       {/* Navigation arrows */}
       {canScrollLeft && (
         <button
@@ -109,7 +109,7 @@ export function BrandSlider({ brands }: BrandSliderProps) {
       {/* Scrollable container */}
       <div
         ref={scrollRef}
-        className="flex gap-5 overflow-x-auto scrollbar-hide scroll-smooth py-4 -mx-4 px-4"
+        className="flex gap-5 overflow-x-auto scrollbar-hide scroll-smooth py-6 -mx-6 px-6"
         style={{ scrollSnapType: "x mandatory" }}
       >
         {brands.map((b) => {
@@ -217,8 +217,8 @@ export function BrandSlider({ brands }: BrandSliderProps) {
             </Link>
           );
         })}
-        {/* Spacer so last card clears the gradient mask */}
-        <div className="flex-none w-2" aria-hidden="true" />
+        {/* Spacer so last card shadow isn't clipped */}
+        <div className="flex-none w-4" aria-hidden="true" />
       </div>
     </div>
   );
