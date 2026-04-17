@@ -98,14 +98,18 @@ export function BrandSlider({ brands }: BrandSliderProps) {
         </button>
       )}
 
-      {/* Gradient masks — always visible for visual consistency */}
-      <div className={`absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none transition-opacity duration-300 ${canScrollLeft ? "opacity-100" : "opacity-0"}`} />
-      <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+      {/* Gradient masks */}
+      {canScrollLeft && (
+        <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+      )}
+      {canScrollRight && (
+        <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+      )}
 
       {/* Scrollable container */}
       <div
         ref={scrollRef}
-        className="flex gap-5 overflow-x-auto scrollbar-hide scroll-smooth pb-4 -mx-4 px-4"
+        className="flex gap-5 overflow-x-auto scrollbar-hide scroll-smooth py-4 -mx-4 px-4"
         style={{ scrollSnapType: "x mandatory" }}
       >
         {brands.map((b) => {
@@ -116,7 +120,7 @@ export function BrandSlider({ brands }: BrandSliderProps) {
             <Link
               key={b.slug}
               href={`/${b.slug}`}
-              className="group relative flex-none w-[280px] md:w-[300px] h-[400px] bg-[#0c0c0c] border border-[#1e1e1e] rounded-3xl overflow-hidden hover:border-[#333] transition-all duration-500"
+              className="group relative flex-none w-[280px] md:w-[300px] h-[400px] bg-[#0c0c0c] border border-[#1e1e1e] rounded-3xl overflow-hidden hover:border-[#333] transition-all duration-500 shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
               style={{ scrollSnapAlign: "start" }}
             >
               {/* ── Arka Plan: Stok Makine Görseli ── */}
@@ -213,6 +217,8 @@ export function BrandSlider({ brands }: BrandSliderProps) {
             </Link>
           );
         })}
+        {/* Spacer so last card clears the gradient mask */}
+        <div className="flex-none w-2" aria-hidden="true" />
       </div>
     </div>
   );
