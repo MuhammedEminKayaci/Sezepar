@@ -98,13 +98,9 @@ export function BrandSlider({ brands }: BrandSliderProps) {
         </button>
       )}
 
-      {/* Gradient masks */}
-      {canScrollLeft && (
-        <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
-      )}
-      {canScrollRight && (
-        <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
-      )}
+      {/* Gradient masks — always visible for visual consistency */}
+      <div className={`absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none transition-opacity duration-300 ${canScrollLeft ? "opacity-100" : "opacity-0"}`} />
+      <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
 
       {/* Scrollable container */}
       <div
