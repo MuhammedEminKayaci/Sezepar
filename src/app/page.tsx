@@ -99,7 +99,7 @@ export default function Home() {
       </section>
 
       {/* ─── İSTATİSTİKLER ─── */}
-      <section className="border-y border-amber-200/60 bg-amber-50/50">
+      <section className="border-y border-amber-200/60 bg-[#f9fafb]">
         <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
             <div className="text-3xl md:text-4xl font-black text-amber-600">
@@ -139,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* ─── NEDEN BİZ ─── */}
-      <section className="border-t border-amber-200/60 bg-amber-50/30">
+      <section className="border-t border-amber-200/60 bg-[#f9fafb]">
         <div className="max-w-7xl mx-auto px-4 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Sol: Görsel */}
@@ -253,7 +253,7 @@ export default function Home() {
       </section>
 
       {/* ─── KATEGORİLER ─── */}
-      <section className="border-t border-amber-200/60 bg-amber-50/30">
+      <section className="border-t border-amber-200/60 bg-[#f9fafb]">
         <div className="max-w-7xl mx-auto px-4 py-20">
           <div className="text-center mb-12">
             <span className="text-xs font-bold text-amber-500 uppercase tracking-widest">Kategoriler</span>
@@ -274,7 +274,7 @@ export default function Home() {
                   <Link
                     key={cat.slug}
                     href={`/kategoriler/${cat.slug}`}
-                    className="group relative bg-white border border-amber-100 rounded-2xl p-6 hover:border-amber-400/40 hover:bg-amber-50/50 hover:shadow-md hover:shadow-amber-500/5 transition-all duration-300 overflow-hidden"
+                    className="group relative bg-white border border-amber-100 rounded-2xl p-6 hover:border-amber-400/40 hover:bg-[#f9fafb] hover:shadow-md hover:shadow-amber-500/5 transition-all duration-300 overflow-hidden"
                   >
                     {/* Subtle corner glow */}
                     <div className="absolute -top-10 -right-10 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />

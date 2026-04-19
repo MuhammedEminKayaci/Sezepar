@@ -90,7 +90,7 @@ export function ProductSlider({ products }: { products: ProductData[] }) {
             style={{ scrollSnapAlign: "start" }}
           >
             {/* Image */}
-            <div className="relative aspect-square bg-amber-50/30 overflow-hidden">
+            <div className="relative aspect-square bg-[#f9fafb] overflow-hidden">
               {p.image_path ? (
                 <Image
                   src={getProductImageUrl(p.image_path || '')}

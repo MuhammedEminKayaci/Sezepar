@@ -99,7 +99,7 @@ export default async function ProductDetailPage({ params }: Props) {
       {/* Ürün Ana Bölüm */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
         {/* Görsel */}
-        <div className="relative bg-amber-50/30 border border-amber-100 rounded-2xl overflow-hidden group">
+        <div className="relative bg-[#f9fafb] border border-amber-100 rounded-2xl overflow-hidden group">
           <div className="aspect-square relative">
             <Image
               src={imgSrc}

@@ -12,7 +12,7 @@ export function ProductCard({ product }: { product: Product }) {
       className="group bg-white border border-amber-100 rounded-xl overflow-hidden hover:border-amber-400/60 hover:shadow-lg hover:shadow-amber-500/10 transition-all duration-200"
     >
       {/* Image */}
-      <div className="relative aspect-square bg-amber-50/30 overflow-hidden">
+      <div className="relative aspect-square bg-[#f9fafb] overflow-hidden">
         <Image
           src={imgSrc}
           alt={product.name}
