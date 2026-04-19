@@ -17,13 +17,13 @@ function CategoryCard({ node, depth = 0 }: { node: CategoryNode; depth?: number 
     <div>
       <Link
         href={href}
-        className="group block bg-white border border-[#e5e7eb] rounded-xl p-5 hover:border-amber-500/30 hover:shadow-md transition-all duration-200"
+        className="group block bg-white border border-amber-100 rounded-xl p-5 hover:border-amber-400/50 hover:shadow-md hover:shadow-amber-500/5 transition-all duration-200"
       >
         <div className="flex items-center justify-between mb-2">
           <h3 className="text-[#111827] font-semibold group-hover:text-amber-600 transition-colors">
             {node.name}
           </h3>
-          <span className="text-xs text-[#9ca3af] bg-[#f3f4f6] group-hover:bg-[#e5e7eb] px-2 py-1 rounded-full transition-colors">
+          <span className="text-xs text-amber-700/60 bg-amber-50 group-hover:bg-amber-100 px-2 py-1 rounded-full transition-colors">
             {node.count.toLocaleString("tr-TR")} ürün
           </span>
         </div>
@@ -48,10 +48,10 @@ export default function CategoriesPage() {
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-[#9ca3af] mb-6">
-        <Link href="/" className="hover:text-[#111827] transition-colors">
+        <Link href="/" className="hover:text-amber-600 transition-colors">
           Ana Sayfa
         </Link>
-        <span>/</span>
+        <span className="text-amber-300">/</span>
         <span className="text-[#111827] font-medium">Kategoriler</span>
       </nav>
 
@@ -60,6 +60,7 @@ export default function CategoriesPage() {
         <h1 className="text-3xl md:text-4xl font-bold text-[#111827] mb-2">
           Tüm Kategoriler
         </h1>
+        <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full mb-2" />
         <p className="text-[#6b7280]">
           {tree.length} ana kategori · Tüm markalar dahil
         </p>

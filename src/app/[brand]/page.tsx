@@ -69,10 +69,10 @@ export default async function BrandPage({ params, searchParams }: Props) {
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-[#9ca3af] mb-6">
-        <Link href="/" className="hover:text-[#111827] transition-colors">
+        <Link href="/" className="hover:text-amber-600 transition-colors">
           Ana Sayfa
         </Link>
-        <span>/</span>
+        <span className="text-amber-300">/</span>
         <span className="text-[#111827] font-medium">{brandInfo.name}</span>
         {kategori && (
           <>
@@ -87,6 +87,7 @@ export default async function BrandPage({ params, searchParams }: Props) {
         <h1 className="text-3xl md:text-4xl font-bold text-[#111827] mb-2">
           {brandInfo.name} Yedek Parça
         </h1>
+        <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full mb-2" />
         <p className="text-[#6b7280]">
           {filtered.length.toLocaleString("tr-TR")} ürün bulundu
         </p>
@@ -120,7 +121,7 @@ export default async function BrandPage({ params, searchParams }: Props) {
             </>
           ) : (
             <div className="text-center py-20 text-[#666]">
-              <svg className="w-16 h-16 mx-auto mb-4 text-[#333]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-16 h-16 mx-auto mb-4 text-amber-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0v5a2 2 0 01-2 2H6a2 2 0 01-2-2v-5m16 0h-2.586a1 1 0 00-.707.293l-2.414 2.414a1 1 0 01-.707.293h-3.172a1 1 0 01-.707-.293l-2.414-2.414A1 1 0 006.586 13H4" />
               </svg>
               <p>Bu kategoride ürün bulunamadı.</p>

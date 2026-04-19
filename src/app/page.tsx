@@ -99,20 +99,20 @@ export default function Home() {
       </section>
 
       {/* ─── İSTATİSTİKLER ─── */}
-      <section className="border-y border-[#e5e7eb] bg-[#f9fafb]">
+      <section className="border-y border-amber-200/60 bg-amber-50/50">
         <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
-            <div className="text-3xl md:text-4xl font-black text-[#111827]">
+            <div className="text-3xl md:text-4xl font-black text-amber-600">
               {stats.totalProducts.toLocaleString("tr-TR")}+
             </div>
             <div className="text-sm text-[#6b7280] mt-1">Yedek Parça</div>
           </div>
           <div>
-            <div className="text-3xl md:text-4xl font-black text-[#111827]">{stats.totalBrands}</div>
+            <div className="text-3xl md:text-4xl font-black text-amber-600">{stats.totalBrands}</div>
             <div className="text-sm text-[#6b7280] mt-1">Dünya Markası</div>
           </div>
           <div>
-            <div className="text-3xl md:text-4xl font-black text-[#111827]">{categories.length}+</div>
+            <div className="text-3xl md:text-4xl font-black text-amber-600">{categories.length}+</div>
             <div className="text-sm text-[#6b7280] mt-1">Ürün Kategorisi</div>
           </div>
           <div>
@@ -128,6 +128,7 @@ export default function Home() {
           <div className="text-center mb-12">
             <span className="text-xs font-bold text-amber-500 uppercase tracking-widest">Yetkili Tedarikçi</span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mt-2 mb-3">Dünya Markaları</h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full mx-auto mb-3" />
             <p className="text-[#6b7280] max-w-lg mx-auto">
               Sektörün lider markalarının orijinal yedek parçalarına tek noktadan ulaşın.
             </p>
@@ -138,7 +139,7 @@ export default function Home() {
       </section>
 
       {/* ─── NEDEN BİZ ─── */}
-      <section className="border-t border-[#e5e7eb] bg-[#f9fafb]">
+      <section className="border-t border-amber-200/60 bg-amber-50/30">
         <div className="max-w-7xl mx-auto px-4 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Sol: Görsel */}
@@ -172,6 +173,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mt-2 mb-6">
                 Güvenilir Tedarikçiniz
               </h2>
+              <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full mb-6" />
               <p className="text-[#6b7280] mb-8">
                 Yıllardır sektöre hizmet veren tecrübemizle yanınızdayız.
               </p>
@@ -196,7 +198,7 @@ export default function Home() {
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="group flex gap-4 items-start bg-white border border-[#e5e7eb] rounded-2xl p-5 hover:border-amber-500/20 hover:shadow-md transition-all duration-300"
+                    className="group flex gap-4 items-start bg-white border border-amber-100 rounded-2xl p-5 hover:border-amber-400/40 hover:shadow-md hover:shadow-amber-500/5 transition-all duration-300"
                   >
                     <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0 group-hover:bg-amber-500/15 transition-colors">
                       <svg className="w-6 h-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -224,6 +226,7 @@ export default function Home() {
               <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mt-2">
                 Öne Çıkan Ürünler
               </h2>
+              <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full mt-3" />
             </div>
             <Link
               href="/kategoriler"
@@ -250,13 +253,14 @@ export default function Home() {
       </section>
 
       {/* ─── KATEGORİLER ─── */}
-      <section className="border-t border-[#e5e7eb] bg-[#f9fafb]">
+      <section className="border-t border-amber-200/60 bg-amber-50/30">
         <div className="max-w-7xl mx-auto px-4 py-20">
           <div className="text-center mb-12">
             <span className="text-xs font-bold text-amber-500 uppercase tracking-widest">Kategoriler</span>
             <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mt-2 mb-3">
               Parça Kategorileri
             </h2>
+            <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full mx-auto mb-3" />
             <p className="text-[#6b7280]">İhtiyacınıza göre doğru kategoriyi seçin</p>
           </div>
 
@@ -270,7 +274,7 @@ export default function Home() {
                   <Link
                     key={cat.slug}
                     href={`/kategoriler/${cat.slug}`}
-                    className="group relative bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-amber-500/20 hover:bg-[#f9fafb] hover:shadow-md transition-all duration-300 overflow-hidden"
+                    className="group relative bg-white border border-amber-100 rounded-2xl p-6 hover:border-amber-400/40 hover:bg-amber-50/50 hover:shadow-md hover:shadow-amber-500/5 transition-all duration-300 overflow-hidden"
                   >
                     {/* Subtle corner glow */}
                     <div className="absolute -top-10 -right-10 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -300,7 +304,7 @@ export default function Home() {
                           {cat.children.slice(0, 3).map((sub) => (
                             <span
                               key={sub.slug}
-                              className="text-[10px] text-[#9ca3af] bg-[#f3f4f6] px-2 py-0.5 rounded-full"
+                              className="text-[10px] text-amber-700/60 bg-amber-50 px-2 py-0.5 rounded-full"
                             >
                               {sub.name}
                             </span>
@@ -337,7 +341,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link
             href="/arama"
-            className="group flex items-center gap-4 bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-amber-500/20 hover:shadow-md transition-all"
+            className="group flex items-center gap-4 bg-white border border-amber-100 rounded-2xl p-6 hover:border-amber-400/40 hover:shadow-md hover:shadow-amber-500/5 transition-all"
           >
             <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0">
               <svg className="w-6 h-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -354,7 +358,7 @@ export default function Home() {
             href={`https://wa.me/${SITE_CONFIG.whatsapp}?text=${encodeURIComponent("Merhaba, yedek parça hakkında bilgi almak istiyorum.")}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-4 bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-[#25D366]/30 hover:shadow-md transition-all"
+            className="group flex items-center gap-4 bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-[#25D366]/30 hover:shadow-md hover:shadow-green-500/5 transition-all"
           >
             <div className="w-12 h-12 rounded-xl bg-[#25D366]/10 flex items-center justify-center shrink-0">
               <svg className="w-6 h-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
@@ -369,7 +373,7 @@ export default function Home() {
 
           <a
             href={`tel:${SITE_CONFIG.phone}`}
-            className="group flex items-center gap-4 bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-blue-500/20 hover:shadow-md transition-all"
+            className="group flex items-center gap-4 bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-blue-500/20 hover:shadow-md hover:shadow-blue-500/5 transition-all"
           >
             <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0">
               <svg className="w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">

@@ -78,7 +78,7 @@ export function BrandSlider({ brands }: BrandSliderProps) {
       {canScrollLeft && (
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/90 border border-[#e5e7eb] flex items-center justify-center text-[#374151] hover:bg-[#f9fafb] shadow-lg transition-all backdrop-blur-sm -translate-x-4 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/90 border border-amber-200 flex items-center justify-center text-amber-600 hover:bg-amber-50 shadow-lg shadow-amber-500/10 transition-all backdrop-blur-sm -translate-x-4 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
           aria-label="Geri"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -89,7 +89,7 @@ export function BrandSlider({ brands }: BrandSliderProps) {
       {canScrollRight && (
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/90 border border-[#e5e7eb] flex items-center justify-center text-[#374151] hover:bg-[#f9fafb] shadow-lg transition-all backdrop-blur-sm translate-x-4 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/90 border border-amber-200 flex items-center justify-center text-amber-600 hover:bg-amber-50 shadow-lg shadow-amber-500/10 transition-all backdrop-blur-sm translate-x-4 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
           aria-label="İleri"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -120,7 +120,7 @@ export function BrandSlider({ brands }: BrandSliderProps) {
             <Link
               key={b.slug}
               href={`/${b.slug}`}
-              className="group relative flex-none w-[280px] md:w-[300px] h-[400px] bg-white border border-[#e5e7eb] rounded-3xl overflow-hidden hover:border-[#d1d5db] hover:shadow-xl transition-all duration-500"
+              className="group relative flex-none w-[280px] md:w-[300px] h-[400px] bg-white border border-amber-100 rounded-3xl overflow-hidden hover:border-amber-300 hover:shadow-xl hover:shadow-amber-500/10 transition-all duration-500"
               style={{ scrollSnapAlign: "start" }}
             >
               {/* ── Arka Plan: Stok Makine Görseli ── */}

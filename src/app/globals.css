@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 @theme inline {
-  --color-background: #ffffff;
+  --color-background: #fffdf7;
   --color-foreground: #111827;
   --color-muted: #6b7280;
   --color-border: #e5e7eb;
   --color-card: #ffffff;
-  --color-card-hover: #f9fafb;
+  --color-card-hover: #fffbeb;
   --color-accent: #f59e0b;
   --color-accent-hover: #d97706;
   --color-success: #22c55e;
@@ -15,7 +15,7 @@
 
 * {
   scrollbar-width: thin;
-  scrollbar-color: #d1d5db transparent;
+  scrollbar-color: #f59e0b40 transparent;
 }
 
 body {

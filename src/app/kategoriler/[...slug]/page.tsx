@@ -103,20 +103,20 @@ export default async function CategoryDetailPage({ params, searchParams }: Props
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-[#9ca3af] mb-6 flex-wrap">
-        <Link href="/" className="hover:text-[#111827] transition-colors">
+        <Link href="/" className="hover:text-amber-600 transition-colors">
           Ana Sayfa
         </Link>
-        <span>/</span>
-        <Link href="/kategoriler" className="hover:text-[#111827] transition-colors">
+        <span className="text-amber-300">/</span>
+        <Link href="/kategoriler" className="hover:text-amber-600 transition-colors">
           Kategoriler
         </Link>
         {breadcrumbParts.map((part, i) => (
           <span key={part.href} className="flex items-center gap-2">
-            <span>/</span>
+            <span className="text-amber-300">/</span>
             {i === breadcrumbParts.length - 1 ? (
               <span className="text-[#111827] font-medium">{part.name}</span>
             ) : (
-              <Link href={part.href} className="hover:text-[#111827] transition-colors">
+              <Link href={part.href} className="hover:text-amber-600 transition-colors">
                 {part.name}
               </Link>
             )}
@@ -129,6 +129,7 @@ export default async function CategoryDetailPage({ params, searchParams }: Props
         <h1 className="text-3xl md:text-4xl font-bold text-[#111827] mb-2">
           {node.name}
         </h1>
+        <div className="w-16 h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-full mb-2" />
         <p className="text-[#6b7280]">
           {filtered.length.toLocaleString("tr-TR")} ürün
           {marka && (
@@ -148,7 +149,7 @@ export default async function CategoryDetailPage({ params, searchParams }: Props
       {/* Sub-categories */}
       {node.children.length > 0 && !marka && (
         <div className="mb-8">
-          <h2 className="text-sm font-semibold text-[#9ca3af] uppercase tracking-wider mb-3">
+          <h2 className="text-sm font-semibold text-amber-600 uppercase tracking-wider mb-3">
             Alt Kategoriler
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -156,7 +157,7 @@ export default async function CategoryDetailPage({ params, searchParams }: Props
               <Link
                 key={child.slug}
                 href={`/kategoriler/${categoryPath}/${child.slug}`}
-                className="px-4 py-2 bg-white border border-[#e5e7eb] rounded-lg text-sm text-[#6b7280] hover:text-[#111827] hover:border-amber-500/30 transition-all"
+                className="px-4 py-2 bg-white border border-amber-200 rounded-lg text-sm text-[#6b7280] hover:text-amber-700 hover:border-amber-400/50 hover:bg-amber-50 transition-all"
               >
                 {child.name}
                 <span className="ml-2 text-xs text-[#9ca3af]">{child.count}</span>
@@ -170,8 +171,8 @@ export default async function CategoryDetailPage({ params, searchParams }: Props
         {/* Brand Filter Sidebar */}
         {availableBrands.length > 1 && (
           <div className="lg:w-56 shrink-0">
-            <div className="bg-white border border-[#e5e7eb] rounded-xl p-4 lg:sticky lg:top-24">
-              <h3 className="text-sm font-semibold text-[#111827] mb-3">Markaya Göre</h3>
+            <div className="bg-white border border-amber-100 rounded-xl p-4 lg:sticky lg:top-24">
+              <h3 className="text-sm font-semibold text-amber-700 mb-3">Markaya Göre</h3>
               <div className="space-y-1">
                 {availableBrands.map((b) => {
                   const isActive = marka === b.slug;
@@ -185,7 +186,7 @@ export default async function CategoryDetailPage({ params, searchParams }: Props
                       className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-all ${
                         isActive
                           ? "bg-amber-500/10 text-amber-600 border border-amber-500/20"
-                          : "text-[#6b7280] hover:bg-[#f3f4f6] hover:text-[#111827]"
+                          : "text-[#6b7280] hover:bg-amber-50 hover:text-amber-700"
                       }`}
                     >
                       <span>{b.name}</span>

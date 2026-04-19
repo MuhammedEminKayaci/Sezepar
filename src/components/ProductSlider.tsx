@@ -48,7 +48,7 @@ export function ProductSlider({ products }: { products: ProductData[] }) {
       {canScrollLeft && (
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/90 border border-[#e5e7eb] flex items-center justify-center text-[#374151] hover:bg-[#f9fafb] shadow-lg transition-all backdrop-blur-sm -translate-x-3 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/90 border border-amber-200 flex items-center justify-center text-amber-600 hover:bg-amber-50 shadow-lg shadow-amber-500/10 transition-all backdrop-blur-sm -translate-x-3 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
           aria-label="Geri"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,7 +59,7 @@ export function ProductSlider({ products }: { products: ProductData[] }) {
       {canScrollRight && (
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/90 border border-[#e5e7eb] flex items-center justify-center text-[#374151] hover:bg-[#f9fafb] shadow-lg transition-all backdrop-blur-sm translate-x-3 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/90 border border-amber-200 flex items-center justify-center text-amber-600 hover:bg-amber-50 shadow-lg shadow-amber-500/10 transition-all backdrop-blur-sm translate-x-3 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
           aria-label="İleri"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -86,11 +86,11 @@ export function ProductSlider({ products }: { products: ProductData[] }) {
           <Link
             key={`${p.brand_slug}-${p.slug}`}
             href={`/${p.brand_slug}/${p.slug}`}
-            className="group flex-none w-[220px] md:w-[240px] bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-amber-400/50 hover:shadow-lg hover:shadow-amber-500/5 transition-all duration-300"
+            className="group flex-none w-[220px] md:w-[240px] bg-white border border-amber-100 rounded-2xl overflow-hidden hover:border-amber-400/60 hover:shadow-lg hover:shadow-amber-500/10 transition-all duration-300"
             style={{ scrollSnapAlign: "start" }}
           >
             {/* Image */}
-            <div className="relative aspect-square bg-[#f9fafb] overflow-hidden">
+            <div className="relative aspect-square bg-amber-50/30 overflow-hidden">
               {p.image_path ? (
                 <Image
                   src={getProductImageUrl(p.image_path || '')}
@@ -115,7 +115,7 @@ export function ProductSlider({ products }: { products: ProductData[] }) {
               <div className="text-xs font-mono text-amber-600 mb-1.5 tracking-wide">
                 {p.oem_code}
               </div>
-              <h3 className="text-sm text-[#374151] line-clamp-2 leading-snug group-hover:text-[#111827] transition-colors min-h-[2.5em]">
+              <h3 className="text-sm text-[#374151] line-clamp-2 leading-snug group-hover:text-amber-700 transition-colors min-h-[2.5em]">
                 {p.name}
               </h3>
               <div className="mt-3 flex items-center justify-between">

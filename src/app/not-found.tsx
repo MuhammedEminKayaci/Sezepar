@@ -6,7 +6,7 @@ export default function NotFound() {
       <div className="text-center">
         {/* 404 Number */}
         <div className="relative mb-8">
-          <span className="text-[10rem] md:text-[14rem] font-black text-[#f3f4f6] leading-none select-none">
+          <span className="text-[10rem] md:text-[14rem] font-black text-amber-100 leading-none select-none">
             404
           </span>
           <div className="absolute inset-0 flex items-center justify-center">
@@ -44,7 +44,7 @@ export default function NotFound() {
           </Link>
           <Link
             href="/kategoriler"
-            className="px-6 py-3 bg-white border border-[#e5e7eb] hover:border-amber-400/50 text-[#111827] rounded-xl transition-all"
+            className="px-6 py-3 bg-white border border-amber-200 hover:border-amber-400 hover:bg-amber-50 text-[#111827] rounded-xl transition-all"
           >
             Kategorilere Göz At
           </Link>

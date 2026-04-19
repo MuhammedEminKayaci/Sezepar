@@ -79,16 +79,16 @@ export default async function ProductDetailPage({ params }: Props) {
         <Link href="/" className="hover:text-[#111827] transition-colors">
           Ana Sayfa
         </Link>
-        <span>/</span>
+        <span className="text-amber-300">/</span>
         <Link
           href={`/${product.brand_slug}`}
-          className="hover:text-[#111827] transition-colors"
+          className="hover:text-amber-600 transition-colors"
         >
           {product.brand}
         </Link>
         {categoryParts.map((part, i) => (
           <span key={i} className="flex items-center gap-2">
-            <span>/</span>
+            <span className="text-amber-300">/</span>
             <span className={i === categoryParts.length - 1 ? "text-[#6b7280]" : ""}>
               {part}
             </span>
@@ -99,7 +99,7 @@ export default async function ProductDetailPage({ params }: Props) {
       {/* Ürün Ana Bölüm */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
         {/* Görsel */}
-        <div className="relative bg-[#f9fafb] border border-[#e5e7eb] rounded-2xl overflow-hidden group">
+        <div className="relative bg-amber-50/30 border border-amber-100 rounded-2xl overflow-hidden group">
           <div className="aspect-square relative">
             <Image
               src={imgSrc}
@@ -139,8 +139,8 @@ export default async function ProductDetailPage({ params }: Props) {
           )}
 
           {/* Bilgi Tablosu */}
-          <div className="bg-white border border-[#e5e7eb] rounded-xl overflow-hidden mb-8">
-            <div className="grid grid-cols-1 divide-y divide-[#e5e7eb]">
+          <div className="bg-white border border-amber-100 rounded-xl overflow-hidden mb-8">
+            <div className="grid grid-cols-1 divide-y divide-amber-100">
               <div className="flex items-center px-4 py-3">
                 <span className="text-[#9ca3af] text-sm w-32 shrink-0">OEM Kodu</span>
                 <span className="text-[#111827] font-mono font-medium">{product.oem_code}</span>
@@ -177,7 +177,7 @@ export default async function ProductDetailPage({ params }: Props) {
             <div className="grid grid-cols-2 gap-3">
               <a
                 href={`tel:${SITE_CONFIG.phone}`}
-                className="flex items-center justify-center gap-2 py-3 bg-white border border-[#e5e7eb] hover:border-amber-500/50 text-[#374151] rounded-xl transition-all duration-200"
+                className="flex items-center justify-center gap-2 py-3 bg-white border border-amber-200 hover:border-amber-500 hover:bg-amber-50 text-[#374151] rounded-xl transition-all duration-200"
               >
                 <svg className="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
@@ -186,7 +186,7 @@ export default async function ProductDetailPage({ params }: Props) {
               </a>
               <a
                 href={`mailto:${SITE_CONFIG.email}?subject=${encodeURIComponent(`${product.oem_code} Teklif Talebi`)}&body=${encodeURIComponent(`Merhaba,\n\n${product.brand} ${product.oem_code} (${product.name}) ürünü hakkında teklif almak istiyorum.\n\nTeşekkürler.`)}`}
-                className="flex items-center justify-center gap-2 py-3 bg-white border border-[#e5e7eb] hover:border-amber-500/50 text-[#374151] rounded-xl transition-all duration-200"
+                className="flex items-center justify-center gap-2 py-3 bg-white border border-amber-200 hover:border-amber-500 hover:bg-amber-50 text-[#374151] rounded-xl transition-all duration-200"
               >
                 <svg className="w-5 h-5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />

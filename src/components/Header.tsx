@@ -76,7 +76,7 @@ export function Header() {
       <header
         className={`sticky top-0 z-50 transition-all duration-500 ${
           scrolled
-            ? "bg-white/95 backdrop-blur-2xl shadow-[0_1px_3px_rgba(0,0,0,0.08)] border-b border-[#e5e7eb]"
+            ? "bg-white/95 backdrop-blur-2xl shadow-[0_1px_3px_rgba(0,0,0,0.08)] border-b border-amber-200/60"
             : "bg-white/80 backdrop-blur-md border-b border-transparent"
         }`}
       >
@@ -92,7 +92,7 @@ export function Header() {
                 <span className="text-[17px] font-bold tracking-tight text-[#111827] leading-none">
                   {SITE_CONFIG.name}
                 </span>
-                <span className="text-[9px] text-[#9ca3af] font-medium tracking-[0.2em] uppercase leading-none mt-0.5">
+                <span className="text-[9px] text-amber-600/70 font-medium tracking-[0.2em] uppercase leading-none mt-0.5">
                   Yedek Parça
                 </span>
               </div>
@@ -104,7 +104,7 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="relative px-3 xl:px-3.5 py-2 text-[13px] font-medium text-[#6b7280] hover:text-[#111827] rounded-lg hover:bg-[#f3f4f6] transition-all duration-200 group whitespace-nowrap"
+                  className="relative px-3 xl:px-3.5 py-2 text-[13px] font-medium text-[#6b7280] hover:text-amber-700 rounded-lg hover:bg-amber-50 transition-all duration-200 group whitespace-nowrap"
                 >
                   {link.name}
                   <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-[2px] bg-gradient-to-r from-amber-400 to-amber-600 rounded-full group-hover:w-5 transition-all duration-300" />
@@ -117,7 +117,7 @@ export function Header() {
               {/* Search Button */}
               <button
                 onClick={() => setSearchOpen(true)}
-                className="flex items-center gap-2 h-9 px-3 rounded-xl text-[#9ca3af] hover:text-[#111827] hover:bg-[#f3f4f6] transition-all duration-200 group"
+                className="flex items-center gap-2 h-9 px-3 rounded-xl text-[#9ca3af] hover:text-amber-600 hover:bg-amber-50 transition-all duration-200 group"
                 aria-label="Arama"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -134,7 +134,7 @@ export function Header() {
               {/* Phone */}
               <a
                 href={`tel:${SITE_CONFIG.phone}`}
-                className="hidden xl:flex items-center gap-1.5 h-9 px-3 rounded-xl text-[#6b7280] hover:text-[#111827] hover:bg-[#f3f4f6] transition-all duration-200"
+                className="hidden xl:flex items-center gap-1.5 h-9 px-3 rounded-xl text-[#6b7280] hover:text-amber-600 hover:bg-amber-50 transition-all duration-200"
               >
                 <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

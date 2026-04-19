@@ -41,7 +41,7 @@ export function Pagination({
       {currentPage > 1 ? (
         <Link
           href={getUrl(currentPage - 1)}
-          className="px-3 py-2 text-sm text-[#6b7280] hover:text-[#111827] bg-white border border-[#e5e7eb] rounded-lg hover:border-[#d1d5db] transition-colors"
+          className="px-3 py-2 text-sm text-[#6b7280] hover:text-amber-600 bg-white border border-[#e5e7eb] rounded-lg hover:border-amber-300 transition-colors"
         >
           ‹
         </Link>
@@ -63,7 +63,7 @@ export function Pagination({
             className={`px-3 py-2 text-sm rounded-lg border transition-colors ${
               p === currentPage
                 ? "bg-amber-500 border-amber-500 text-black font-semibold"
-                : "text-[#6b7280] hover:text-[#111827] bg-white border-[#e5e7eb] hover:border-[#d1d5db]"
+                : "text-[#6b7280] hover:text-amber-600 bg-white border-[#e5e7eb] hover:border-amber-300"
             }`}
           >
             {p}
@@ -75,7 +75,7 @@ export function Pagination({
       {currentPage < totalPages ? (
         <Link
           href={getUrl(currentPage + 1)}
-          className="px-3 py-2 text-sm text-[#6b7280] hover:text-[#111827] bg-white border border-[#e5e7eb] rounded-lg hover:border-[#d1d5db] transition-colors"
+          className="px-3 py-2 text-sm text-[#6b7280] hover:text-amber-600 bg-white border border-[#e5e7eb] rounded-lg hover:border-amber-300 transition-colors"
         >
           ›
         </Link>

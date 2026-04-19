@@ -9,10 +9,10 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/${product.brand_slug}/${product.slug}`}
-      className="group bg-white border border-[#e5e7eb] rounded-xl overflow-hidden hover:border-amber-400/50 hover:shadow-lg hover:shadow-amber-500/5 transition-all duration-200"
+      className="group bg-white border border-amber-100 rounded-xl overflow-hidden hover:border-amber-400/60 hover:shadow-lg hover:shadow-amber-500/10 transition-all duration-200"
     >
       {/* Image */}
-      <div className="relative aspect-square bg-[#f9fafb] overflow-hidden">
+      <div className="relative aspect-square bg-amber-50/30 overflow-hidden">
         <Image
           src={imgSrc}
           alt={product.name}
@@ -27,7 +27,7 @@ export function ProductCard({ product }: { product: Product }) {
         <div className="text-xs font-mono text-amber-600 mb-1">
           {product.oem_code}
         </div>
-        <h3 className="text-sm text-[#374151] line-clamp-2 leading-snug group-hover:text-[#111827] transition-colors">
+        <h3 className="text-sm text-[#374151] line-clamp-2 leading-snug group-hover:text-amber-700 transition-colors">
           {product.name}
         </h3>
         <div className="mt-2 flex items-center gap-1 text-xs text-[#9ca3af]">

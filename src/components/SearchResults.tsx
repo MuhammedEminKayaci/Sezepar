@@ -88,10 +88,10 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Breadcrumb */}
       <nav className="flex items-center gap-2 text-sm text-[#9ca3af] mb-6">
-        <Link href="/" className="hover:text-[#111827] transition-colors">
+        <Link href="/" className="hover:text-amber-600 transition-colors">
           Ana Sayfa
         </Link>
-        <span>/</span>
+        <span className="text-amber-300">/</span>
         <span className="text-[#111827] font-medium">Arama</span>
       </nav>
 
@@ -103,11 +103,11 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="OEM kodu veya parça adı ile arayın..."
-            className="w-full h-14 pl-12 pr-32 bg-white border border-[#e5e7eb] rounded-xl text-[#111827] text-lg placeholder-[#9ca3af] focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all"
+            className="w-full h-14 pl-12 pr-32 bg-white border border-amber-200 rounded-xl text-[#111827] text-lg placeholder-[#9ca3af] focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/20 transition-all"
             autoFocus
           />
           <svg
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#9ca3af]"
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-amber-400"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -159,8 +159,8 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
             {/* Brand Filters - Sidebar */}
             {brandCounts.length > 1 && (
               <div className="lg:w-56 shrink-0">
-                <div className="bg-white border border-[#e5e7eb] rounded-xl p-4 lg:sticky lg:top-24">
-                  <h3 className="text-sm font-semibold text-[#111827] mb-3">Markaya Göre</h3>
+                <div className="bg-white border border-amber-100 rounded-xl p-4 lg:sticky lg:top-24">
+                  <h3 className="text-sm font-semibold text-amber-700 mb-3">Markaya Göre</h3>
                   <div className="space-y-1">
                     {brandCounts.map((b) => (
                       <button
@@ -169,7 +169,7 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
                         className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-all ${
                           marka === b.slug
                             ? "bg-amber-500/10 text-amber-600 border border-amber-500/20"
-                            : "text-[#6b7280] hover:bg-[#f3f4f6] hover:text-[#111827]"
+                            : "text-[#6b7280] hover:bg-amber-50 hover:text-amber-700"
                         }`}
                       >
                         <span>{b.name}</span>
@@ -199,7 +199,7 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
           /* No Results */
           <div className="text-center py-20">
             <svg
-              className="w-20 h-20 mx-auto mb-6 text-[#d1d5db]"
+              className="w-20 h-20 mx-auto mb-6 text-amber-300"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -223,7 +223,7 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
                     setInputValue(s);
                     router.push(`/arama?q=${encodeURIComponent(s)}`);
                   }}
-                  className="px-4 py-2 bg-[#f3f4f6] border border-[#e5e7eb] rounded-lg text-[#6b7280] hover:text-[#111827] hover:border-amber-500/30 transition-all"
+                  className="px-4 py-2 bg-amber-50 border border-amber-200 rounded-lg text-[#6b7280] hover:text-amber-700 hover:border-amber-400/50 transition-all"
                 >
                   {s}
                 </button>

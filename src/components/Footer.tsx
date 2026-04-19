@@ -11,7 +11,7 @@ const brands = [
 
 export function Footer() {
   return (
-    <footer className="bg-[#111827] border-t border-[#1f2937] mt-auto">
+    <footer className="bg-[#111827] border-t-4 border-t-amber-500 mt-auto">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand */}
@@ -32,7 +32,7 @@ export function Footer() {
 
           {/* Markalar */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
+            <h3 className="text-sm font-semibold text-amber-400 mb-4 uppercase tracking-wider">
               Markalar
             </h3>
             <ul className="space-y-2">
@@ -51,7 +51,7 @@ export function Footer() {
 
           {/* Hızlı Linkler */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
+            <h3 className="text-sm font-semibold text-amber-400 mb-4 uppercase tracking-wider">
               Hızlı Linkler
             </h3>
             <ul className="space-y-2">
@@ -84,7 +84,7 @@ export function Footer() {
 
           {/* İletişim */}
           <div>
-            <h3 className="text-sm font-semibold text-white mb-4 uppercase tracking-wider">
+            <h3 className="text-sm font-semibold text-amber-400 mb-4 uppercase tracking-wider">
               İletişim
             </h3>
             <ul className="space-y-3">
@@ -116,7 +116,7 @@ export function Footer() {
         </div>
 
         {/* Bottom */}
-        <div className="mt-10 pt-6 border-t border-[#1f2937] text-center">
+        <div className="mt-10 pt-6 border-t border-amber-500/20 text-center">
           <p className="text-xs text-[#6b7280]">
             © {new Date().getFullYear()} {SITE_CONFIG.name}. Tüm hakları saklıdır.
           </p>
