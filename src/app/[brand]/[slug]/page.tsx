@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getProduct, getSimilarProducts, getBrands } from "@/lib/products";
 import { SITE_CONFIG, BRAND_COLORS } from "@/lib/config";
 import { ProductCard } from "@/components/ProductCard";
+import { getProductImageUrl } from "@/lib/supabase";
 
 type Props = {
   params: Promise<{ brand: string; slug: string }>;
@@ -21,7 +22,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     openGraph: {
       title: `${product.oem_code} — ${product.name}`,
       description: `${product.brand} ${product.name}. Orijinal OEM kodu: ${product.oem_code}`,
-      images: product.image_path ? [`/${product.image_path}`] : [],
+      images: product.image_path ? [getProductImageUrl(product.image_path)] : [],
     },
   };
 }
@@ -38,7 +39,7 @@ export default async function ProductDetailPage({ params }: Props) {
   const brands = getBrands();
   const brandInfo = brands.find((b) => b.slug === brand);
   const brandColor = BRAND_COLORS[brand] || "#f59e0b";
-  const imgSrc = `/${product.image_path}`;
+  const imgSrc = getProductImageUrl(product.image_path);
 
   // WhatsApp mesajı
   const whatsappMsg = encodeURIComponent(
@@ -67,7 +68,7 @@ export default async function ProductDetailPage({ params }: Props) {
             },
             category: product.category,
             image: product.image_path
-              ? `https://sezepar.com/${product.image_path}`
+              ? getProductImageUrl(product.image_path)
               : undefined,
           }),
         }}

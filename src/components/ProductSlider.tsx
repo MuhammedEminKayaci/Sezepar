@@ -3,6 +3,7 @@
 import { useRef, useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { getProductImageUrl } from "@/lib/supabase";
 
 interface ProductData {
   oem_code: string;
@@ -92,7 +93,7 @@ export function ProductSlider({ products }: { products: ProductData[] }) {
             <div className="relative aspect-square bg-[#0e0e0e] overflow-hidden">
               {p.image_path ? (
                 <Image
-                  src={`/${p.image_path}`}
+                  src={getProductImageUrl(p.image_path || '')}
                   alt={p.name}
                   fill
                   className="object-contain p-5 group-hover:scale-110 transition-transform duration-500"

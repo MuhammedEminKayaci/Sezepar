@@ -1,9 +1,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import type { Product } from "@/types";
+import { getProductImageUrl } from "@/lib/supabase";
 
 export function ProductCard({ product }: { product: Product }) {
-  const imgSrc = `/${product.image_path}`;
+  const imgSrc = getProductImageUrl(product.image_path);
 
   return (
     <Link
