@@ -78,7 +78,7 @@ export function BrandSlider({ brands }: BrandSliderProps) {
       {canScrollLeft && (
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#1a1a1a]/90 border border-[#333] flex items-center justify-center text-white hover:bg-[#262626] transition-all backdrop-blur-sm -translate-x-4 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/90 border border-[#e5e7eb] flex items-center justify-center text-[#374151] hover:bg-[#f9fafb] shadow-lg transition-all backdrop-blur-sm -translate-x-4 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
           aria-label="Geri"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -89,7 +89,7 @@ export function BrandSlider({ brands }: BrandSliderProps) {
       {canScrollRight && (
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-[#1a1a1a]/90 border border-[#333] flex items-center justify-center text-white hover:bg-[#262626] transition-all backdrop-blur-sm translate-x-4 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-12 h-12 rounded-full bg-white/90 border border-[#e5e7eb] flex items-center justify-center text-[#374151] hover:bg-[#f9fafb] shadow-lg transition-all backdrop-blur-sm translate-x-4 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
           aria-label="İleri"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -100,10 +100,10 @@ export function BrandSlider({ brands }: BrandSliderProps) {
 
       {/* Gradient masks */}
       {canScrollLeft && (
-        <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
       )}
       {canScrollRight && (
-        <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
       )}
 
       {/* Scrollable container */}
@@ -120,7 +120,7 @@ export function BrandSlider({ brands }: BrandSliderProps) {
             <Link
               key={b.slug}
               href={`/${b.slug}`}
-              className="group relative flex-none w-[280px] md:w-[300px] h-[400px] bg-[#0c0c0c] border border-[#1e1e1e] rounded-3xl overflow-hidden hover:border-[#333] transition-all duration-500 shadow-[0_4px_24px_rgba(0,0,0,0.4)]"
+              className="group relative flex-none w-[280px] md:w-[300px] h-[400px] bg-white border border-[#e5e7eb] rounded-3xl overflow-hidden hover:border-[#d1d5db] hover:shadow-xl transition-all duration-500"
               style={{ scrollSnapAlign: "start" }}
             >
               {/* ── Arka Plan: Stok Makine Görseli ── */}
@@ -143,7 +143,7 @@ export function BrandSlider({ brands }: BrandSliderProps) {
                   background: `
                     radial-gradient(ellipse at 50% 0%, ${color}10, transparent 50%),
                     radial-gradient(ellipse at 50% 100%, ${color}08, transparent 50%),
-                    linear-gradient(to bottom, #0c0c0cee 0%, #0c0c0c99 40%, #0c0c0ccc 100%)
+                    linear-gradient(to bottom, rgba(255,255,255,0.95) 0%, rgba(255,255,255,0.7) 40%, rgba(255,255,255,0.9) 100%)
                   `,
                 }}
               />
@@ -163,7 +163,7 @@ export function BrandSlider({ brands }: BrandSliderProps) {
                       priority
                     />
                   </div>
-                  <span className="text-xs text-[#777] font-medium tracking-wider uppercase text-center">
+                  <span className="text-xs text-[#9ca3af] font-medium tracking-wider uppercase text-center">
                     {BRAND_DESCRIPTIONS[b.slug] || "İş Makinesi"}
                   </span>
                 </div>
@@ -180,10 +180,10 @@ export function BrandSlider({ brands }: BrandSliderProps) {
 
                   <div className="flex items-end justify-between">
                     <div>
-                      <div className="text-3xl font-black text-white leading-none">
+                      <div className="text-3xl font-black text-[#111827] leading-none">
                         {b.count.toLocaleString("tr-TR")}
                       </div>
-                      <div className="text-[11px] text-[#666] mt-1 font-medium">yedek parça</div>
+                      <div className="text-[11px] text-[#9ca3af] mt-1 font-medium">yedek parça</div>
                     </div>
 
                     <div

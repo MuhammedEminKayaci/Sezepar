@@ -48,7 +48,7 @@ export function ProductSlider({ products }: { products: ProductData[] }) {
       {canScrollLeft && (
         <button
           onClick={() => scroll("left")}
-          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-[#1a1a1a]/90 border border-[#333] flex items-center justify-center text-white hover:bg-[#262626] transition-all backdrop-blur-sm -translate-x-3 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
+          className="absolute left-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/90 border border-[#e5e7eb] flex items-center justify-center text-[#374151] hover:bg-[#f9fafb] shadow-lg transition-all backdrop-blur-sm -translate-x-3 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
           aria-label="Geri"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -59,7 +59,7 @@ export function ProductSlider({ products }: { products: ProductData[] }) {
       {canScrollRight && (
         <button
           onClick={() => scroll("right")}
-          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-[#1a1a1a]/90 border border-[#333] flex items-center justify-center text-white hover:bg-[#262626] transition-all backdrop-blur-sm translate-x-3 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
+          className="absolute right-0 top-1/2 -translate-y-1/2 z-20 w-11 h-11 rounded-full bg-white/90 border border-[#e5e7eb] flex items-center justify-center text-[#374151] hover:bg-[#f9fafb] shadow-lg transition-all backdrop-blur-sm translate-x-3 opacity-0 group-hover/slider:opacity-100 group-hover/slider:translate-x-0"
           aria-label="İleri"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -70,10 +70,10 @@ export function ProductSlider({ products }: { products: ProductData[] }) {
 
       {/* Gradient masks */}
       {canScrollLeft && (
-        <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+        <div className="absolute left-0 top-0 bottom-0 w-12 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
       )}
       {canScrollRight && (
-        <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10 pointer-events-none" />
+        <div className="absolute right-0 top-0 bottom-0 w-12 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
       )}
 
       {/* Scrollable container */}
@@ -86,11 +86,11 @@ export function ProductSlider({ products }: { products: ProductData[] }) {
           <Link
             key={`${p.brand_slug}-${p.slug}`}
             href={`/${p.brand_slug}/${p.slug}`}
-            className="group flex-none w-[220px] md:w-[240px] bg-[#111] border border-[#222] rounded-2xl overflow-hidden hover:border-[#404040] transition-all duration-300"
+            className="group flex-none w-[220px] md:w-[240px] bg-white border border-[#e5e7eb] rounded-2xl overflow-hidden hover:border-amber-400/50 hover:shadow-lg hover:shadow-amber-500/5 transition-all duration-300"
             style={{ scrollSnapAlign: "start" }}
           >
             {/* Image */}
-            <div className="relative aspect-square bg-[#0e0e0e] overflow-hidden">
+            <div className="relative aspect-square bg-[#f9fafb] overflow-hidden">
               {p.image_path ? (
                 <Image
                   src={getProductImageUrl(p.image_path || '')}
@@ -101,30 +101,30 @@ export function ProductSlider({ products }: { products: ProductData[] }) {
                 />
               ) : (
                 <div className="w-full h-full flex items-center justify-center">
-                  <svg className="w-12 h-12 text-[#333]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-12 h-12 text-[#d1d5db]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
                   </svg>
                 </div>
               )}
               {/* Gradient overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#111] via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </div>
 
             {/* Info */}
             <div className="p-4">
-              <div className="text-xs font-mono text-amber-500 mb-1.5 tracking-wide">
+              <div className="text-xs font-mono text-amber-600 mb-1.5 tracking-wide">
                 {p.oem_code}
               </div>
-              <h3 className="text-sm text-[#ccc] line-clamp-2 leading-snug group-hover:text-white transition-colors min-h-[2.5em]">
+              <h3 className="text-sm text-[#374151] line-clamp-2 leading-snug group-hover:text-[#111827] transition-colors min-h-[2.5em]">
                 {p.name}
               </h3>
               <div className="mt-3 flex items-center justify-between">
-                <div className="flex items-center gap-1.5 text-xs text-[#555]">
+                <div className="flex items-center gap-1.5 text-xs text-[#9ca3af]">
                   <span className="font-medium">{p.brand}</span>
                   <span>·</span>
                   <span className="truncate max-w-[80px]">{p.category.split(" > ").pop()}</span>
                 </div>
-                <svg className="w-4 h-4 text-[#444] group-hover:text-amber-500 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="w-4 h-4 text-[#d1d5db] group-hover:text-amber-500 group-hover:translate-x-0.5 transition-all" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
               </div>

@@ -17,18 +17,18 @@ function CategoryCard({ node, depth = 0 }: { node: CategoryNode; depth?: number 
     <div>
       <Link
         href={href}
-        className="group block bg-[#141414] border border-[#262626] rounded-xl p-5 hover:border-amber-500/30 hover:bg-[#1a1a1a] transition-all duration-200"
+        className="group block bg-white border border-[#e5e7eb] rounded-xl p-5 hover:border-amber-500/30 hover:shadow-md transition-all duration-200"
       >
         <div className="flex items-center justify-between mb-2">
-          <h3 className="text-white font-semibold group-hover:text-amber-500 transition-colors">
+          <h3 className="text-[#111827] font-semibold group-hover:text-amber-600 transition-colors">
             {node.name}
           </h3>
-          <span className="text-xs text-[#666] bg-[#1a1a1a] group-hover:bg-[#222] px-2 py-1 rounded-full transition-colors">
+          <span className="text-xs text-[#9ca3af] bg-[#f3f4f6] group-hover:bg-[#e5e7eb] px-2 py-1 rounded-full transition-colors">
             {node.count.toLocaleString("tr-TR")} ürün
           </span>
         </div>
         {node.children.length > 0 && (
-          <p className="text-xs text-[#555] line-clamp-1">
+          <p className="text-xs text-[#9ca3af] line-clamp-1">
             {node.children
               .slice(0, 5)
               .map((c) => c.name)
@@ -47,20 +47,20 @@ export default function CategoriesPage() {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-sm text-[#666] mb-6">
-        <Link href="/" className="hover:text-white transition-colors">
+      <nav className="flex items-center gap-2 text-sm text-[#9ca3af] mb-6">
+        <Link href="/" className="hover:text-[#111827] transition-colors">
           Ana Sayfa
         </Link>
         <span>/</span>
-        <span className="text-white font-medium">Kategoriler</span>
+        <span className="text-[#111827] font-medium">Kategoriler</span>
       </nav>
 
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#111827] mb-2">
           Tüm Kategoriler
         </h1>
-        <p className="text-[#a3a3a3]">
+        <p className="text-[#6b7280]">
           {tree.length} ana kategori · Tüm markalar dahil
         </p>
       </div>

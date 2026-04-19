@@ -26,7 +26,7 @@ function CategoryItem({
         {hasChildren && (
           <button
             onClick={() => setOpen(!open)}
-            className="p-1 mr-1 text-[#666] hover:text-white transition-colors"
+            className="p-1 mr-1 text-[#9ca3af] hover:text-[#111827] transition-colors"
             aria-label={open ? "Kapat" : "Aç"}
           >
             <svg
@@ -45,17 +45,17 @@ function CategoryItem({
           href={href}
           className={`flex-1 py-1.5 text-sm truncate transition-colors ${
             isActive
-              ? "text-amber-500 font-medium"
-              : "text-[#a3a3a3] hover:text-white"
+              ? "text-amber-600 font-medium"
+              : "text-[#6b7280] hover:text-[#111827]"
           }`}
         >
           {node.name}
-          <span className="ml-1 text-xs text-[#555]">({node.count})</span>
+          <span className="ml-1 text-xs text-[#9ca3af]">({node.count})</span>
         </a>
       </div>
 
       {open && hasChildren && (
-        <div className="ml-4 border-l border-[#262626]">
+        <div className="ml-4 border-l border-[#e5e7eb]">
           {node.children.map((child) => (
             <CategoryItem
               key={child.slug}
@@ -87,7 +87,7 @@ export function CategorySidebar({
       {/* Mobile toggle */}
       <button
         onClick={() => setMobileOpen(!mobileOpen)}
-        className="lg:hidden flex items-center gap-2 w-full px-4 py-3 bg-[#141414] border border-[#262626] rounded-xl text-sm text-[#a3a3a3] mb-4"
+        className="lg:hidden flex items-center gap-2 w-full px-4 py-3 bg-white border border-[#e5e7eb] rounded-xl text-sm text-[#6b7280] mb-4"
       >
         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 010 2H4a1 1 0 01-1-1zm4 8a1 1 0 011-1h8a1 1 0 010 2H8a1 1 0 01-1-1zm2 8a1 1 0 011-1h4a1 1 0 010 2h-4a1 1 0 01-1-1z" />
@@ -100,8 +100,8 @@ export function CategorySidebar({
 
       {/* Sidebar content */}
       <aside className={`${mobileOpen ? "block" : "hidden"} lg:block`}>
-        <div className="bg-[#141414] border border-[#262626] rounded-xl p-4">
-          <h3 className="text-sm font-semibold text-white mb-3 uppercase tracking-wider">
+        <div className="bg-white border border-[#e5e7eb] rounded-xl p-4">
+          <h3 className="text-sm font-semibold text-[#111827] mb-3 uppercase tracking-wider">
             Kategoriler
           </h3>
           <div className="space-y-0.5">
@@ -109,8 +109,8 @@ export function CategorySidebar({
               href={`/${brandSlug}`}
               className={`block py-1.5 text-sm transition-colors ${
                 !activeCategory
-                  ? "text-amber-500 font-medium"
-                  : "text-[#a3a3a3] hover:text-white"
+                  ? "text-amber-600 font-medium"
+                  : "text-[#6b7280] hover:text-[#111827]"
               }`}
             >
               Tümü

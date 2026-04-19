@@ -102,21 +102,21 @@ export default async function CategoryDetailPage({ params, searchParams }: Props
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-sm text-[#666] mb-6 flex-wrap">
-        <Link href="/" className="hover:text-white transition-colors">
+      <nav className="flex items-center gap-2 text-sm text-[#9ca3af] mb-6 flex-wrap">
+        <Link href="/" className="hover:text-[#111827] transition-colors">
           Ana Sayfa
         </Link>
         <span>/</span>
-        <Link href="/kategoriler" className="hover:text-white transition-colors">
+        <Link href="/kategoriler" className="hover:text-[#111827] transition-colors">
           Kategoriler
         </Link>
         {breadcrumbParts.map((part, i) => (
           <span key={part.href} className="flex items-center gap-2">
             <span>/</span>
             {i === breadcrumbParts.length - 1 ? (
-              <span className="text-white font-medium">{part.name}</span>
+              <span className="text-[#111827] font-medium">{part.name}</span>
             ) : (
-              <Link href={part.href} className="hover:text-white transition-colors">
+              <Link href={part.href} className="hover:text-[#111827] transition-colors">
                 {part.name}
               </Link>
             )}
@@ -126,10 +126,10 @@ export default async function CategoryDetailPage({ params, searchParams }: Props
 
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+        <h1 className="text-3xl md:text-4xl font-bold text-[#111827] mb-2">
           {node.name}
         </h1>
-        <p className="text-[#a3a3a3]">
+        <p className="text-[#6b7280]">
           {filtered.length.toLocaleString("tr-TR")} ürün
           {marka && (
             <span>
@@ -148,7 +148,7 @@ export default async function CategoryDetailPage({ params, searchParams }: Props
       {/* Sub-categories */}
       {node.children.length > 0 && !marka && (
         <div className="mb-8">
-          <h2 className="text-sm font-semibold text-[#666] uppercase tracking-wider mb-3">
+          <h2 className="text-sm font-semibold text-[#9ca3af] uppercase tracking-wider mb-3">
             Alt Kategoriler
           </h2>
           <div className="flex flex-wrap gap-2">
@@ -156,10 +156,10 @@ export default async function CategoryDetailPage({ params, searchParams }: Props
               <Link
                 key={child.slug}
                 href={`/kategoriler/${categoryPath}/${child.slug}`}
-                className="px-4 py-2 bg-[#141414] border border-[#262626] rounded-lg text-sm text-[#a3a3a3] hover:text-white hover:border-amber-500/30 transition-all"
+                className="px-4 py-2 bg-white border border-[#e5e7eb] rounded-lg text-sm text-[#6b7280] hover:text-[#111827] hover:border-amber-500/30 transition-all"
               >
                 {child.name}
-                <span className="ml-2 text-xs text-[#555]">{child.count}</span>
+                <span className="ml-2 text-xs text-[#9ca3af]">{child.count}</span>
               </Link>
             ))}
           </div>
@@ -170,8 +170,8 @@ export default async function CategoryDetailPage({ params, searchParams }: Props
         {/* Brand Filter Sidebar */}
         {availableBrands.length > 1 && (
           <div className="lg:w-56 shrink-0">
-            <div className="bg-[#141414] border border-[#262626] rounded-xl p-4 lg:sticky lg:top-24">
-              <h3 className="text-sm font-semibold text-white mb-3">Markaya Göre</h3>
+            <div className="bg-white border border-[#e5e7eb] rounded-xl p-4 lg:sticky lg:top-24">
+              <h3 className="text-sm font-semibold text-[#111827] mb-3">Markaya Göre</h3>
               <div className="space-y-1">
                 {availableBrands.map((b) => {
                   const isActive = marka === b.slug;
@@ -184,12 +184,12 @@ export default async function CategoryDetailPage({ params, searchParams }: Props
                       href={href}
                       className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-all ${
                         isActive
-                          ? "bg-amber-500/10 text-amber-500 border border-amber-500/20"
-                          : "text-[#a3a3a3] hover:bg-[#1a1a1a] hover:text-white"
+                          ? "bg-amber-500/10 text-amber-600 border border-amber-500/20"
+                          : "text-[#6b7280] hover:bg-[#f3f4f6] hover:text-[#111827]"
                       }`}
                     >
                       <span>{b.name}</span>
-                      <span className="text-xs text-[#666]">{b.count}</span>
+                      <span className="text-xs text-[#9ca3af]">{b.count}</span>
                     </Link>
                   );
                 })}
@@ -214,7 +214,7 @@ export default async function CategoryDetailPage({ params, searchParams }: Props
               />
             </>
           ) : (
-            <div className="text-center py-20 text-[#666]">
+            <div className="text-center py-20 text-[#9ca3af]">
               <p>Bu kategoride ürün bulunamadı.</p>
             </div>
           )}

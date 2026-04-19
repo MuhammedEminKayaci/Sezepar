@@ -41,19 +41,19 @@ export function Pagination({
       {currentPage > 1 ? (
         <Link
           href={getUrl(currentPage - 1)}
-          className="px-3 py-2 text-sm text-[#a3a3a3] hover:text-white bg-[#141414] border border-[#262626] rounded-lg hover:border-[#404040] transition-colors"
+          className="px-3 py-2 text-sm text-[#6b7280] hover:text-[#111827] bg-white border border-[#e5e7eb] rounded-lg hover:border-[#d1d5db] transition-colors"
         >
           ‹
         </Link>
       ) : (
-        <span className="px-3 py-2 text-sm text-[#333] bg-[#0d0d0d] border border-[#1a1a1a] rounded-lg cursor-not-allowed">
+        <span className="px-3 py-2 text-sm text-[#d1d5db] bg-[#f9fafb] border border-[#e5e7eb] rounded-lg cursor-not-allowed">
           ‹
         </span>
       )}
 
       {pages.map((p, i) =>
         p === "..." ? (
-          <span key={`dots-${i}`} className="px-2 py-2 text-sm text-[#555]">
+          <span key={`dots-${i}`} className="px-2 py-2 text-sm text-[#9ca3af]">
             …
           </span>
         ) : (
@@ -63,7 +63,7 @@ export function Pagination({
             className={`px-3 py-2 text-sm rounded-lg border transition-colors ${
               p === currentPage
                 ? "bg-amber-500 border-amber-500 text-black font-semibold"
-                : "text-[#a3a3a3] hover:text-white bg-[#141414] border-[#262626] hover:border-[#404040]"
+                : "text-[#6b7280] hover:text-[#111827] bg-white border-[#e5e7eb] hover:border-[#d1d5db]"
             }`}
           >
             {p}
@@ -75,12 +75,12 @@ export function Pagination({
       {currentPage < totalPages ? (
         <Link
           href={getUrl(currentPage + 1)}
-          className="px-3 py-2 text-sm text-[#a3a3a3] hover:text-white bg-[#141414] border border-[#262626] rounded-lg hover:border-[#404040] transition-colors"
+          className="px-3 py-2 text-sm text-[#6b7280] hover:text-[#111827] bg-white border border-[#e5e7eb] rounded-lg hover:border-[#d1d5db] transition-colors"
         >
           ›
         </Link>
       ) : (
-        <span className="px-3 py-2 text-sm text-[#333] bg-[#0d0d0d] border border-[#1a1a1a] rounded-lg cursor-not-allowed">
+        <span className="px-3 py-2 text-sm text-[#d1d5db] bg-[#f9fafb] border border-[#e5e7eb] rounded-lg cursor-not-allowed">
           ›
         </span>
       )}

@@ -87,12 +87,12 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8">
       {/* Breadcrumb */}
-      <nav className="flex items-center gap-2 text-sm text-[#666] mb-6">
-        <Link href="/" className="hover:text-white transition-colors">
+      <nav className="flex items-center gap-2 text-sm text-[#9ca3af] mb-6">
+        <Link href="/" className="hover:text-[#111827] transition-colors">
           Ana Sayfa
         </Link>
         <span>/</span>
-        <span className="text-white font-medium">Arama</span>
+        <span className="text-[#111827] font-medium">Arama</span>
       </nav>
 
       {/* Search Input */}
@@ -103,11 +103,11 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="OEM kodu veya parça adı ile arayın..."
-            className="w-full h-14 pl-12 pr-32 bg-[#141414] border border-[#262626] rounded-xl text-white text-lg placeholder-[#555] focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all"
+            className="w-full h-14 pl-12 pr-32 bg-white border border-[#e5e7eb] rounded-xl text-[#111827] text-lg placeholder-[#9ca3af] focus:outline-none focus:border-amber-500/50 focus:ring-2 focus:ring-amber-500/20 transition-all"
             autoFocus
           />
           <svg
-            className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#555]"
+            className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-[#9ca3af]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -131,10 +131,10 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
       {/* Results Header */}
       {query && (
         <div className="mb-6">
-          <h1 className="text-2xl md:text-3xl font-bold text-white mb-1">
+          <h1 className="text-2xl md:text-3xl font-bold text-[#111827] mb-1">
             &ldquo;{query}&rdquo; için sonuçlar
           </h1>
-          <p className="text-[#a3a3a3]">
+          <p className="text-[#6b7280]">
             {filtered.length.toLocaleString("tr-TR")} ürün bulundu
             {marka && (
               <span>
@@ -159,8 +159,8 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
             {/* Brand Filters - Sidebar */}
             {brandCounts.length > 1 && (
               <div className="lg:w-56 shrink-0">
-                <div className="bg-[#141414] border border-[#262626] rounded-xl p-4 lg:sticky lg:top-24">
-                  <h3 className="text-sm font-semibold text-white mb-3">Markaya Göre</h3>
+                <div className="bg-white border border-[#e5e7eb] rounded-xl p-4 lg:sticky lg:top-24">
+                  <h3 className="text-sm font-semibold text-[#111827] mb-3">Markaya Göre</h3>
                   <div className="space-y-1">
                     {brandCounts.map((b) => (
                       <button
@@ -168,12 +168,12 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
                         onClick={() => handleBrandFilter(b.slug)}
                         className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-sm transition-all ${
                           marka === b.slug
-                            ? "bg-amber-500/10 text-amber-500 border border-amber-500/20"
-                            : "text-[#a3a3a3] hover:bg-[#1a1a1a] hover:text-white"
+                            ? "bg-amber-500/10 text-amber-600 border border-amber-500/20"
+                            : "text-[#6b7280] hover:bg-[#f3f4f6] hover:text-[#111827]"
                         }`}
                       >
                         <span>{b.name}</span>
-                        <span className="text-xs text-[#666]">{b.count}</span>
+                        <span className="text-xs text-[#9ca3af]">{b.count}</span>
                       </button>
                     ))}
                   </div>
@@ -199,7 +199,7 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
           /* No Results */
           <div className="text-center py-20">
             <svg
-              className="w-20 h-20 mx-auto mb-6 text-[#333]"
+              className="w-20 h-20 mx-auto mb-6 text-[#d1d5db]"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -211,8 +211,8 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               />
             </svg>
-            <h2 className="text-xl font-bold text-white mb-2">Sonuç Bulunamadı</h2>
-            <p className="text-[#666] mb-6 max-w-md mx-auto">
+            <h2 className="text-xl font-bold text-[#111827] mb-2">Sonuç Bulunamadı</h2>
+            <p className="text-[#6b7280] mb-6 max-w-md mx-auto">
               &ldquo;{query}&rdquo; araması için sonuç bulunamadı. Farklı bir OEM kodu veya parça adı deneyebilirsiniz.
             </p>
             <div className="flex flex-wrap justify-center gap-2 text-sm">
@@ -223,7 +223,7 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
                     setInputValue(s);
                     router.push(`/arama?q=${encodeURIComponent(s)}`);
                   }}
-                  className="px-4 py-2 bg-[#1a1a1a] border border-[#333] rounded-lg text-[#a3a3a3] hover:text-white hover:border-amber-500/30 transition-all"
+                  className="px-4 py-2 bg-[#f3f4f6] border border-[#e5e7eb] rounded-lg text-[#6b7280] hover:text-[#111827] hover:border-amber-500/30 transition-all"
                 >
                   {s}
                 </button>
@@ -235,7 +235,7 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
         /* Empty State */
         <div className="text-center py-20">
           <svg
-            className="w-20 h-20 mx-auto mb-6 text-[#333]"
+            className="w-20 h-20 mx-auto mb-6 text-[#d1d5db]"
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -247,8 +247,8 @@ export function SearchResults({ allProducts }: { allProducts: Product[] }) {
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
-          <h2 className="text-xl font-bold text-white mb-2">Parça Arayın</h2>
-          <p className="text-[#666] max-w-md mx-auto">
+          <h2 className="text-xl font-bold text-[#111827] mb-2">Parça Arayın</h2>
+          <p className="text-[#6b7280] max-w-md mx-auto">
             OEM kodu, parça adı veya İngilizce isim ile arama yapabilirsiniz.
           </p>
         </div>

@@ -99,25 +99,25 @@ export default function Home() {
       </section>
 
       {/* ─── İSTATİSTİKLER ─── */}
-      <section className="border-y border-[#262626] bg-[#0d0d0d]">
+      <section className="border-y border-[#e5e7eb] bg-[#f9fafb]">
         <div className="max-w-7xl mx-auto px-4 py-10 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           <div>
-            <div className="text-3xl md:text-4xl font-black text-white">
+            <div className="text-3xl md:text-4xl font-black text-[#111827]">
               {stats.totalProducts.toLocaleString("tr-TR")}+
             </div>
-            <div className="text-sm text-[#888] mt-1">Yedek Parça</div>
+            <div className="text-sm text-[#6b7280] mt-1">Yedek Parça</div>
           </div>
           <div>
-            <div className="text-3xl md:text-4xl font-black text-white">{stats.totalBrands}</div>
-            <div className="text-sm text-[#888] mt-1">Dünya Markası</div>
+            <div className="text-3xl md:text-4xl font-black text-[#111827]">{stats.totalBrands}</div>
+            <div className="text-sm text-[#6b7280] mt-1">Dünya Markası</div>
           </div>
           <div>
-            <div className="text-3xl md:text-4xl font-black text-white">{categories.length}+</div>
-            <div className="text-sm text-[#888] mt-1">Ürün Kategorisi</div>
+            <div className="text-3xl md:text-4xl font-black text-[#111827]">{categories.length}+</div>
+            <div className="text-sm text-[#6b7280] mt-1">Ürün Kategorisi</div>
           </div>
           <div>
             <div className="text-3xl md:text-4xl font-black text-amber-500">7/24</div>
-            <div className="text-sm text-[#888] mt-1">Destek Hattı</div>
+            <div className="text-sm text-[#6b7280] mt-1">Destek Hattı</div>
           </div>
         </div>
       </section>
@@ -127,8 +127,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="text-xs font-bold text-amber-500 uppercase tracking-widest">Yetkili Tedarikçi</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-3">Dünya Markaları</h2>
-            <p className="text-[#888] max-w-lg mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mt-2 mb-3">Dünya Markaları</h2>
+            <p className="text-[#6b7280] max-w-lg mx-auto">
               Sektörün lider markalarının orijinal yedek parçalarına tek noktadan ulaşın.
             </p>
           </div>
@@ -138,7 +138,7 @@ export default function Home() {
       </section>
 
       {/* ─── NEDEN BİZ ─── */}
-      <section className="border-t border-[#262626] bg-[#0d0d0d]">
+      <section className="border-t border-[#e5e7eb] bg-[#f9fafb]">
         <div className="max-w-7xl mx-auto px-4 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Sol: Görsel */}
@@ -154,13 +154,13 @@ export default function Home() {
               {/* Overlay Stats */}
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="grid grid-cols-2 gap-3">
-                  <div className="bg-[#0a0a0a]/80 backdrop-blur-md rounded-2xl p-4 border border-[#333]/50">
+                  <div className="bg-black/60 backdrop-blur-md rounded-2xl p-4 border border-white/10">
                     <div className="text-2xl font-black text-amber-500">15+</div>
-                    <div className="text-xs text-[#888]">Yıllık Tecrübe</div>
+                    <div className="text-xs text-white/80">Yıllık Tecrübe</div>
                   </div>
-                  <div className="bg-[#0a0a0a]/80 backdrop-blur-md rounded-2xl p-4 border border-[#333]/50">
+                  <div className="bg-black/60 backdrop-blur-md rounded-2xl p-4 border border-white/10">
                     <div className="text-2xl font-black text-white">500+</div>
-                    <div className="text-xs text-[#888]">Mutlu Müşteri</div>
+                    <div className="text-xs text-white/80">Mutlu Müşteri</div>
                   </div>
                 </div>
               </div>
@@ -169,10 +169,10 @@ export default function Home() {
             {/* Sağ: İçerik */}
             <div>
               <span className="text-xs font-bold text-amber-500 uppercase tracking-widest">Neden SEZEPAR</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mt-2 mb-6">
                 Güvenilir Tedarikçiniz
               </h2>
-              <p className="text-[#888] mb-8">
+              <p className="text-[#6b7280] mb-8">
                 Yıllardır sektöre hizmet veren tecrübemizle yanınızdayız.
               </p>
 
@@ -196,7 +196,7 @@ export default function Home() {
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="group flex gap-4 items-start bg-[#141414] border border-[#262626] rounded-2xl p-5 hover:border-amber-500/20 transition-all duration-300"
+                    className="group flex gap-4 items-start bg-white border border-[#e5e7eb] rounded-2xl p-5 hover:border-amber-500/20 hover:shadow-md transition-all duration-300"
                   >
                     <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0 group-hover:bg-amber-500/15 transition-colors">
                       <svg className="w-6 h-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -204,8 +204,8 @@ export default function Home() {
                       </svg>
                     </div>
                     <div>
-                      <h3 className="text-base font-bold text-white mb-1">{item.title}</h3>
-                      <p className="text-sm text-[#888] leading-relaxed">{item.desc}</p>
+                      <h3 className="text-base font-bold text-[#111827] mb-1">{item.title}</h3>
+                      <p className="text-sm text-[#6b7280] leading-relaxed">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -221,7 +221,7 @@ export default function Home() {
           <div className="flex items-end justify-between mb-10">
             <div>
               <span className="text-xs font-bold text-amber-500 uppercase tracking-widest">Ürün Vitrini</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-white mt-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mt-2">
                 Öne Çıkan Ürünler
               </h2>
             </div>
@@ -250,14 +250,14 @@ export default function Home() {
       </section>
 
       {/* ─── KATEGORİLER ─── */}
-      <section className="border-t border-[#262626] bg-[#0d0d0d]">
+      <section className="border-t border-[#e5e7eb] bg-[#f9fafb]">
         <div className="max-w-7xl mx-auto px-4 py-20">
           <div className="text-center mb-12">
             <span className="text-xs font-bold text-amber-500 uppercase tracking-widest">Kategoriler</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-white mt-2 mb-3">
+            <h2 className="text-3xl md:text-4xl font-bold text-[#111827] mt-2 mb-3">
               Parça Kategorileri
             </h2>
-            <p className="text-[#888]">İhtiyacınıza göre doğru kategoriyi seçin</p>
+            <p className="text-[#6b7280]">İhtiyacınıza göre doğru kategoriyi seçin</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
@@ -270,7 +270,7 @@ export default function Home() {
                   <Link
                     key={cat.slug}
                     href={`/kategoriler/${cat.slug}`}
-                    className="group relative bg-[#141414] border border-[#262626] rounded-2xl p-6 hover:border-amber-500/20 hover:bg-[#181818] transition-all duration-300 overflow-hidden"
+                    className="group relative bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-amber-500/20 hover:bg-[#f9fafb] hover:shadow-md transition-all duration-300 overflow-hidden"
                   >
                     {/* Subtle corner glow */}
                     <div className="absolute -top-10 -right-10 w-32 h-32 bg-amber-500/5 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -287,10 +287,10 @@ export default function Home() {
                           </svg>
                         )}
                       </div>
-                      <h3 className="text-base font-bold text-white mb-1 group-hover:text-amber-400 transition-colors">
+                      <h3 className="text-base font-bold text-[#111827] mb-1 group-hover:text-amber-600 transition-colors">
                         {cat.name}
                       </h3>
-                      <p className="text-sm text-[#666]">
+                      <p className="text-sm text-[#9ca3af]">
                         {cat.count.toLocaleString("tr-TR")} ürün
                       </p>
 
@@ -300,13 +300,13 @@ export default function Home() {
                           {cat.children.slice(0, 3).map((sub) => (
                             <span
                               key={sub.slug}
-                              className="text-[10px] text-[#555] bg-[#1a1a1a] px-2 py-0.5 rounded-full"
+                              className="text-[10px] text-[#9ca3af] bg-[#f3f4f6] px-2 py-0.5 rounded-full"
                             >
                               {sub.name}
                             </span>
                           ))}
                           {cat.children.length > 3 && (
-                            <span className="text-[10px] text-[#444] px-1">
+                            <span className="text-[10px] text-[#d1d5db] px-1">
                               +{cat.children.length - 3}
                             </span>
                           )}
@@ -337,7 +337,7 @@ export default function Home() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <Link
             href="/arama"
-            className="group flex items-center gap-4 bg-[#141414] border border-[#262626] rounded-2xl p-6 hover:border-amber-500/20 transition-all"
+            className="group flex items-center gap-4 bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-amber-500/20 hover:shadow-md transition-all"
           >
             <div className="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center shrink-0">
               <svg className="w-6 h-6 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -345,8 +345,8 @@ export default function Home() {
               </svg>
             </div>
             <div>
-              <h3 className="font-bold text-white group-hover:text-amber-400 transition-colors">OEM Kodu ile Ara</h3>
-              <p className="text-xs text-[#666]">Parça numarasını girin, anında bulun</p>
+              <h3 className="font-bold text-[#111827] group-hover:text-amber-600 transition-colors">OEM Kodu ile Ara</h3>
+              <p className="text-xs text-[#9ca3af]">Parça numarasını girin, anında bulun</p>
             </div>
           </Link>
 
@@ -354,7 +354,7 @@ export default function Home() {
             href={`https://wa.me/${SITE_CONFIG.whatsapp}?text=${encodeURIComponent("Merhaba, yedek parça hakkında bilgi almak istiyorum.")}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex items-center gap-4 bg-[#141414] border border-[#262626] rounded-2xl p-6 hover:border-[#25D366]/30 transition-all"
+            className="group flex items-center gap-4 bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-[#25D366]/30 hover:shadow-md transition-all"
           >
             <div className="w-12 h-12 rounded-xl bg-[#25D366]/10 flex items-center justify-center shrink-0">
               <svg className="w-6 h-6 text-[#25D366]" fill="currentColor" viewBox="0 0 24 24">
@@ -362,14 +362,14 @@ export default function Home() {
               </svg>
             </div>
             <div>
-              <h3 className="font-bold text-white group-hover:text-[#25D366] transition-colors">WhatsApp Destek</h3>
-              <p className="text-xs text-[#666]">Hemen yazın, anında yanıt alın</p>
+              <h3 className="font-bold text-[#111827] group-hover:text-[#25D366] transition-colors">WhatsApp Destek</h3>
+              <p className="text-xs text-[#9ca3af]">Hemen yazın, anında yanıt alın</p>
             </div>
           </a>
 
           <a
             href={`tel:${SITE_CONFIG.phone}`}
-            className="group flex items-center gap-4 bg-[#141414] border border-[#262626] rounded-2xl p-6 hover:border-blue-500/20 transition-all"
+            className="group flex items-center gap-4 bg-white border border-[#e5e7eb] rounded-2xl p-6 hover:border-blue-500/20 hover:shadow-md transition-all"
           >
             <div className="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center shrink-0">
               <svg className="w-6 h-6 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -377,8 +377,8 @@ export default function Home() {
               </svg>
             </div>
             <div>
-              <h3 className="font-bold text-white group-hover:text-blue-400 transition-colors">Bizi Arayın</h3>
-              <p className="text-xs text-[#666]">{SITE_CONFIG.phone}</p>
+              <h3 className="font-bold text-[#111827] group-hover:text-blue-500 transition-colors">Bizi Arayın</h3>
+              <p className="text-xs text-[#9ca3af]">{SITE_CONFIG.phone}</p>
             </div>
           </a>
         </div>
@@ -424,7 +424,7 @@ export default function Home() {
               </a>
               <a
                 href={`tel:${SITE_CONFIG.phone}`}
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#1a1a1a] hover:bg-[#262626] text-white font-semibold rounded-xl border border-[#333] transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-xl border border-white/20 transition-colors"
               >
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />

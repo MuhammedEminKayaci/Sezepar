@@ -9,10 +9,10 @@ export function ProductCard({ product }: { product: Product }) {
   return (
     <Link
       href={`/${product.brand_slug}/${product.slug}`}
-      className="group bg-[#141414] border border-[#262626] rounded-xl overflow-hidden hover:border-[#404040] transition-all duration-200"
+      className="group bg-white border border-[#e5e7eb] rounded-xl overflow-hidden hover:border-amber-400/50 hover:shadow-lg hover:shadow-amber-500/5 transition-all duration-200"
     >
       {/* Image */}
-      <div className="relative aspect-square bg-[#1a1a1a] overflow-hidden">
+      <div className="relative aspect-square bg-[#f9fafb] overflow-hidden">
         <Image
           src={imgSrc}
           alt={product.name}
@@ -24,13 +24,13 @@ export function ProductCard({ product }: { product: Product }) {
 
       {/* Info */}
       <div className="p-3">
-        <div className="text-xs font-mono text-amber-500 mb-1">
+        <div className="text-xs font-mono text-amber-600 mb-1">
           {product.oem_code}
         </div>
-        <h3 className="text-sm text-[#ccc] line-clamp-2 leading-snug group-hover:text-white transition-colors">
+        <h3 className="text-sm text-[#374151] line-clamp-2 leading-snug group-hover:text-[#111827] transition-colors">
           {product.name}
         </h3>
-        <div className="mt-2 flex items-center gap-1 text-xs text-[#666]">
+        <div className="mt-2 flex items-center gap-1 text-xs text-[#9ca3af]">
           <span>{product.brand}</span>
           <span>·</span>
           <span className="truncate">{product.category.split(" > ").pop()}</span>

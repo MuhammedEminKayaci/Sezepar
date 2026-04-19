@@ -22,10 +22,10 @@ export function SearchBar() {
         value={query}
         onChange={(e) => setQuery(e.target.value)}
         placeholder="OEM kodu veya parça adı ile arayın..."
-        className="w-full h-10 pl-10 pr-4 bg-[#141414] border border-[#262626] rounded-lg text-sm text-white placeholder-[#666] focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20 transition-colors"
+        className="w-full h-10 pl-10 pr-4 bg-white border border-[#e5e7eb] rounded-lg text-sm text-[#111827] placeholder-[#9ca3af] focus:outline-none focus:border-amber-500/50 focus:ring-1 focus:ring-amber-500/20 transition-colors"
       />
       <svg
-        className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#666]"
+        className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-[#9ca3af]"
         fill="none"
         viewBox="0 0 24 24"
         stroke="currentColor"
