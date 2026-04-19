@@ -116,7 +116,7 @@ export default function Home() {
             <div className="text-sm text-[#6b7280] mt-1">Ürün Kategorisi</div>
           </div>
           <div>
-            <div className="text-3xl md:text-4xl font-black text-amber-500">7/24</div>
+            <div className="text-3xl md:text-4xl font-black text-amber-600">7/24</div>
             <div className="text-sm text-[#6b7280] mt-1">Destek Hattı</div>
           </div>
         </div>
