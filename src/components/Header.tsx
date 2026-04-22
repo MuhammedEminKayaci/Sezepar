@@ -91,7 +91,7 @@ export function Header() {
                 alt="SEZEPAR - İş Makinesi Yedek Parça"
                 width={990}
                 height={615}
-                className="h-16 w-auto object-contain"
+                className="h-20 w-auto object-contain"
                 priority
               />
             </Link>
