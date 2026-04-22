@@ -117,10 +117,10 @@ export function Header() {
               {/* Search Button */}
               <button
                 onClick={() => setSearchOpen(true)}
-                className="flex items-center gap-2 h-9 px-3 rounded-xl text-[#9ca3af] hover:text-amber-600 hover:bg-amber-50 transition-all duration-200 group"
+                className="flex items-center gap-2 h-9 px-3 rounded-xl text-[#374151] bg-[#f3f4f6] border border-[#e5e7eb] hover:text-amber-600 hover:bg-amber-50 hover:border-amber-200 transition-all duration-200 group md:bg-transparent md:border-transparent md:text-[#9ca3af]"
                 aria-label="Arama"
               >
-                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <svg className="w-[17px] h-[17px]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.2}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                 </svg>
                 <span className="hidden lg:inline text-[12px] text-[#9ca3af] group-hover:text-[#6b7280] transition-colors">
@@ -169,13 +169,17 @@ export function Header() {
               {/* Mobile Hamburger */}
               <button
                 onClick={() => setMobileOpen(!mobileOpen)}
-                className="md:hidden w-9 h-9 rounded-xl flex items-center justify-center text-[#6b7280] hover:text-[#111827] hover:bg-[#f3f4f6] transition-all duration-200"
+                className={`md:hidden w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-200 border ${
+                  mobileOpen
+                    ? "text-amber-600 bg-amber-50 border-amber-200"
+                    : "text-[#374151] bg-[#f3f4f6] border-[#e5e7eb] hover:text-amber-600 hover:bg-amber-50 hover:border-amber-200"
+                }`}
                 aria-label="Menü"
               >
                 <div className="flex flex-col items-center justify-center w-[18px] gap-[5px]">
-                  <span className={`block h-[1.5px] w-full bg-current rounded-full transition-all duration-300 origin-center ${mobileOpen ? "translate-y-[6.5px] rotate-45" : ""}`} />
-                  <span className={`block h-[1.5px] w-full bg-current rounded-full transition-all duration-200 ${mobileOpen ? "opacity-0 scale-x-0" : ""}`} />
-                  <span className={`block h-[1.5px] w-full bg-current rounded-full transition-all duration-300 origin-center ${mobileOpen ? "-translate-y-[6.5px] -rotate-45" : ""}`} />
+                  <span className={`block h-[2px] w-full bg-current rounded-full transition-all duration-300 origin-center ${mobileOpen ? "translate-y-[7px] rotate-45" : ""}`} />
+                  <span className={`block h-[2px] w-full bg-current rounded-full transition-all duration-200 ${mobileOpen ? "opacity-0 scale-x-0" : ""}`} />
+                  <span className={`block h-[2px] w-full bg-current rounded-full transition-all duration-300 origin-center ${mobileOpen ? "-translate-y-[7px] -rotate-45" : ""}`} />
                 </div>
               </button>
             </div>
