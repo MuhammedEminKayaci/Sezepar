@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { SITE_CONFIG } from "@/lib/config";
@@ -84,18 +85,15 @@ export function Header() {
           <div className="flex items-center h-16 sm:h-[68px]">
 
             {/* ─ Logo ─ */}
-            <Link href="/" className="shrink-0 flex items-center gap-2.5 group mr-8">
-              <div className="relative w-9 h-9 rounded-xl bg-gradient-to-br from-amber-400 to-amber-600 flex items-center justify-center shadow-lg shadow-amber-500/20 group-hover:shadow-amber-500/40 transition-all duration-300">
-                <span className="text-black font-black text-xs tracking-tight">SP</span>
-              </div>
-              <div className="flex flex-col">
-                <span className="text-[17px] font-bold tracking-tight text-[#111827] leading-none">
-                  {SITE_CONFIG.name}
-                </span>
-                <span className="text-[9px] text-amber-600/70 font-medium tracking-[0.2em] uppercase leading-none mt-0.5">
-                  Yedek Parça
-                </span>
-              </div>
+            <Link href="/" className="shrink-0 flex items-center mr-6 group opacity-90 hover:opacity-100 transition-opacity duration-200">
+              <Image
+                src="/logo-sezepar.png"
+                alt="SEZEPAR - İş Makinesi Yedek Parça"
+                width={990}
+                height={615}
+                className="h-10 sm:h-12 w-auto object-contain"
+                priority
+              />
             </Link>
 
             {/* ─ Desktop Navigation (center) ─ */}
