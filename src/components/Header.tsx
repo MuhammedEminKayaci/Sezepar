@@ -82,7 +82,7 @@ export function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex items-center h-16 sm:h-[68px]">
+          <div className="flex items-center h-[72px] sm:h-20">
 
             {/* ─ Logo ─ */}
             <Link href="/" className="shrink-0 flex items-center mr-6 group opacity-90 hover:opacity-100 transition-opacity duration-200">
@@ -91,7 +91,7 @@ export function Header() {
                 alt="SEZEPAR - İş Makinesi Yedek Parça"
                 width={990}
                 height={615}
-                className="h-10 sm:h-12 w-auto object-contain"
+                className="h-14 sm:h-16 w-auto object-contain"
                 priority
               />
             </Link>
@@ -189,7 +189,7 @@ export function Header() {
       {/* ── Mobile Menu — üstten aşağı açılan tam genişlik dropdown ── */}
       {/* Backdrop */}
       <div
-        className={`md:hidden fixed inset-0 top-16 z-[998] transition-opacity duration-300 ${
+        className={`md:hidden fixed inset-0 top-20 z-[998] transition-opacity duration-300 ${
           mobileOpen ? "visible opacity-100" : "invisible opacity-0 pointer-events-none"
         }`}
         onClick={() => setMobileOpen(false)}
@@ -197,7 +197,7 @@ export function Header() {
 
       {/* Menu panel */}
       <div
-        className={`md:hidden fixed left-0 right-0 top-16 z-[999] transition-all duration-300 ease-out origin-top ${
+        className={`md:hidden fixed left-0 right-0 top-20 z-[999] transition-all duration-300 ease-out origin-top ${
           mobileOpen
             ? "opacity-100 translate-y-0 scale-y-100"
             : "opacity-0 -translate-y-3 scale-y-95 pointer-events-none"
